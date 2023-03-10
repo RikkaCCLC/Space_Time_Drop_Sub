@@ -17,8 +17,6 @@ public class getPageServiceImpl implements GetPageService {
 
     @Override
     public JSONObject getPage(Integer page) {
-
-
         return null;
     }
 }
