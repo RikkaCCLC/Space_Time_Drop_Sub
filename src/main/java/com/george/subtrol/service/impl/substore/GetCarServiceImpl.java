@@ -25,7 +25,7 @@ public class GetCarServiceImpl implements GetCarService {
         Store user = loginUser.getUser();
 
         QueryWrapper<Store> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("id", user.getId());
+        queryWrapper.eq("stoid", user.getStoid());
         System.out.println(storeMapper.selectList(queryWrapper));
         return storeMapper.selectList(queryWrapper);
 }}

@@ -49,7 +49,7 @@ public class AddServiceImpl implements AddService {
         }
 
         Date now = new Date();
-        SaleInfo saleInfo = new SaleInfo(null, user.getId(), stoName, stoAddr,  now, profit);
+        SaleInfo saleInfo = new SaleInfo(null, user.getStoid(), stoName, stoAddr,  now, profit);
 
         saleInfoMapper.insert(saleInfo);
         map.put("error_message", "success");

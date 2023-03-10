@@ -29,7 +29,7 @@ public class UpdateServiceImpl implements UpdateService {
         Map<String, String> map = new HashMap<>();
 
         Store user1 = new Store(
-                user.getId(),
+                user.getStoid(),
                 user.getUsername(),
                 user.getPassword(),
                 user.getStoname(),

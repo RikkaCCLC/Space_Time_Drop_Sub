@@ -22,7 +22,7 @@ public class InfoServiceImpl implements InfoService {
 
         Map<String, String> map = new HashMap<>();
         map.put("error_message", "success");
-        map.put("id", user.getId().toString());
+        map.put("id", user.getStoid().toString());
         map.put("username", user.getUsername());
 
         return map;

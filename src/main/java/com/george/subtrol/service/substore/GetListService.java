@@ -5,5 +5,5 @@ import com.george.subtrol.pojo.SaleInfo;
 import java.util.List;
 
 public interface GetListService {
-    List<SaleInfo> getList();
+    List<SaleInfo> getList(Integer page);
 }

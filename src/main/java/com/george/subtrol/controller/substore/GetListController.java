@@ -14,7 +14,7 @@ public class GetListController {
     private GetListService getListService;
 
     @GetMapping("/substore/getlist/")
-    public List<SaleInfo> getList() {
-        return getListService.getList();
+    public List<SaleInfo> getList(Integer page) {
+        return getListService.getList(page);
     }
 }

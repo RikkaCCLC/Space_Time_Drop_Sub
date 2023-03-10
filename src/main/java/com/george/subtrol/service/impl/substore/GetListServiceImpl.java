@@ -19,14 +19,15 @@ public class GetListServiceImpl implements GetListService {
     private SaleInfoMapper saleInfoMapper;
 
     @Override
-    public List<SaleInfo> getList() {
+    public List<SaleInfo> getList(Integer page) {
         UsernamePasswordAuthenticationToken authenticationToken =
                 (UsernamePasswordAuthenticationToken) SecurityContextHolder.getContext().getAuthentication();
         UserDetailsImpl loginUser = (UserDetailsImpl) authenticationToken.getPrincipal();
         Store user = loginUser.getUser();
 
         QueryWrapper<SaleInfo> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("stoid", user.getId());
+        queryWrapper.eq("stoid", user.getStoid());
+
         return saleInfoMapper.selectList(queryWrapper);
     }
 
